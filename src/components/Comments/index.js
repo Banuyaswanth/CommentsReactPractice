@@ -100,6 +100,7 @@ class Comments extends Component {
                   initialContainerBackgroundClassNames
                 }
                 each={each}
+                key={each.id}
                 toggleLikeButton={this.toggleLikeButton}
               />
             ))}

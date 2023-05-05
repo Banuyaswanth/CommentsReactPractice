@@ -11,8 +11,8 @@ const CommentItem = props => {
   const {name, comment, isLiked, id, datePosted} = each
 
   const likeImgUrl = isLiked
-    ? 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
-    : 'https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png'
+    ? 'https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png'
+    : 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
   const likeText = isLiked ? 'liked' : 'like'
 
   const likeClicked = () => {
@@ -36,11 +36,13 @@ const CommentItem = props => {
           <img src={likeImgUrl} alt="like" />
           Like
         </button>
-        <img
-          onClick={deleteComment}
-          src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
-          alt="delete"
-        />
+        <button data-testid="delete">
+          <img
+            onClick={deleteComment}
+            src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
+            alt="delete"
+          />
+        </button>
       </div>
       <hr />
     </li>
